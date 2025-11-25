@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    
+    <!-- Theme Toggle -->
+    <div class="theme-toggle" onclick="toggleTheme()">
+        🌙
+    </div>
+
+    <div class="main-container">
+        <!--sidebar-->
+        <div class="sidebar">
+
+            <!--profile-->
+            <div class="profile">
+                <img src="profile.png" alt="Profile Picture">
+                <h2>Ankit Upadhyay</h2>
+                <p id="typing"></p>   <!-- typing text here -->
+                
+                <!-- Resume Button -->
+                <a href="https://drive.google.com/file/d/18ovQihiU_9Ce5wodvGlB9SNmI3r5nz_T/view?usp=sharing" 
+                target="_blank" class="resume-btn">Download Resume</a>
+            </div>
+
+            <!--contact-->
+            <div class="contact">
+                <div class="email">
+                    <h3 class="label">Email</h3>
+                    <a href="mailto:ankitupadhyayx@gmail.com" class="value">ankitupadhyayx@gmail.com</a>
+                </div>
+                <div class="phone">
+                    <h3 class="label">Phone</h3>
+                    <a href="tel:+918938076782" class="value">+91 8938076782</a>
+                </div>
+                <div class="location">
+                    <h3 class="label">Location</h3>
+                    <p class="value">Ghaziabad, Uttar Pradesh</p>
+                </div>
+            </div>
+
+            <!--social media-->
+            <div class="social">
+                <a href="https://github.com/ankitupadhyayx"><img src="https://www.svgrepo.com/show/394174/github.svg" alt=""></a>
+                <a href="https://www.linkedin.com/in/ankit-upadhyay-3a6b66288/"><img src="https://www.svgrepo.com/show/473701/linkedin.svg" alt=""></a>
+                <a href="https://leetcode.com/u/ankitupadhyayx/"><img src="https://www.svgrepo.com/show/330828/leetcode.svg" alt=""></a>
+            </div>
+        </div>
+
+        <div class="main-content">
+
+            <!--navigation-->
+            <div id="navigation">
+                <nav>
+                    <a href="#about" class="active">About</a>
+                    <a href="#skills">Skills</a>
+                    <a href="#education">Education</a>
+                    <a href="#portfolio">Portfolio</a>
+                    <a href="#contact">Contact</a>
+                </nav>
+            </div>
+
+            <!--about me-->
+            <div id="about">
+                <h2 class="heading">About Me</h2>
+                <div class="line"></div>
+                <p class="content">
+                    I am a passionate and dedicated software engineer with a strong foundation in computer science, backend technologies, and artificial intelligence. I enjoy building high-performance applications in Java, Spring Boot, and modern web technologies. My goal is to continuously learn, solve real-life problems using code, and contribute to impactful software products.
+                </p>
+            </div>
+
+            <!--skills-->
+            <div id="skills">
+                <h2 class="heading">Skills</h2>
+                <div class="line"></div>
+                <div class="grid-container">
+                    <div class="item"><img src="https://www.svgrepo.com/show/449120/java.svg"><h3>Java</h3></div>
+                    <div class="item"><img src="https://simpleicons.org/icons/datastax.svg"><h3>Data Structures</h3></div>
+                    <div class="item"><img src="https://simpleicons.org/icons/javascript.svg"><h3>JavaScript</h3></div>
+                    <div class="item"><img src="https://simpleicons.org/icons/react.svg"><h3>React</h3></div>
+                    <div class="item"><img src="https://simpleicons.org/icons/html5.svg"><h3>HTML</h3></div>
+                    <div class="item"><img src="https://simpleicons.org/icons/git.svg"><h3>Git & GitHub</h3></div>
+                </div>
+            </div>
+
+            <!--education-->
+            <div id="education">
+                <h2 class="heading">Education</h2>
+                <div class="line"></div>
+                <div class="edtech">
+                    <div class="edfirst">
+                        <div class="year">2022-26</div>
+                        <h3>B.Tech in CSE (AI & ML)</h3>
+                        <p class="college">IMS Engineering College, Ghaziabad</p>
+                        <p class="work">Learning: Java, DSA, Spring Boot, REST APIs, React, Python, ML & Full Stack.</p>
+                        <div class="goal"></div>
+                    </div>
+
+                    <div class="edsecond">
+                        <div class="year">2020-22</div>
+                        <h3>12th (PCM)</h3>
+                        <p class="college">SR Inter College, Agra</p>
+                        <p class="work">Completed with Physics, Chemistry, Mathematics</p>
+                        <div class="goal"></div>
+                    </div>
+
+                    <div class="edthird">
+                        <div class="year">2018-20</div>
+                        <h3>10th</h3>
+                        <p class="college">SR Inter College, Agra</p>
+                        <p class="work">Completed with Science Stream</p>
+                        <div class="goal"></div>
+                    </div>
+                    <div class="liner"></div>
+                </div>
+            </div>
+
+            <!--portfolio-->
+            <div id="portfolio">
+                <h2 class="heading">Portfolio</h2>
+                <div class="line"></div>
+                <div class="project-container">
+
+                    <!--MediCollab-->
+                    <div class="project">
+                        <img src="project1.png">
+                        <div class="card">
+                            <h3>MediCollab</h3>
+                            <p>MediCollab is a web-based health-centric platform where doctors and patients digitally connect. Doctors can upload medical records, prescriptions, and test results, while patients verify reports, track health history, and book appointments. AI offers assistance based on symptoms.</p>
+
+                            <div class="video-wrapper">
+                                <iframe src="https://drive.google.com/file/d/1sMNm20hBMhligWeuqSrMfIv0wOkMtzQC/preview"
+                                width="100%" height="250" allow="autoplay" frameborder="0" allowfullscreen></iframe>
+                            </div>
+
+                            <span>React</span><span>Tailwind</span><span>Node</span><span>Express</span><span>MongoDB</span><span>JWT</span>
+
+                            <div class="project-buttons">
+                                <a href="https://github.com/ankitupadhyayx/medicollab-finale" target="_blank" class="btn github">GitHub</a>
+                                <a class="btn disabled"></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--URL Shortener-->
+                    <div class="project">
+                        <img src="project2.png">
+                        <div class="card">
+                            <h3>URL Shortener</h3>
+                            <p>Secure link shortener with analytics (click count, IP tracking).</p>
+                            <span>Node</span><span>Express</span><span>MongoDB</span><span>JWT</span><span>REST API</span>
+
+                            <div class="project-buttons">
+                                <a href="https://github.com/ankitupadhyayx/URLs" target="_blank" class="btn github">GitHub</a>
+                                <a href="https://urlminimizer.netlify.app" target="_blank" class="btn live">Live Demo</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--Cyber Crime-->
+                    <div class="project">
+                        <img src="https://www.svgrepo.com/show/503272/cybersecurity-two-tone.svg">
+                        <div class="card">
+                            <h3>Cyber Crime Portal</h3>
+                            <p>Crime reporting system with admin panel, ML-based fake complaint detection & heatmap visualization.</p>
+                            <span>React</span><span>Spring Boot</span><span>MySQL</span><span>Python (NLP)</span><span>JWT</span>
+
+                            <div class="project-buttons">
+                                <a class="btn disabled"></a>
+                                <a class="btn disabled"></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--Skill Swap-->
+                    <div class="project">
+                        <img src="https://www.svgrepo.com/show/47844/add-friend.svg">
+                        <div class="card">
+                            <h3>Skill Swap Portal</h3>
+                            <p>SkillSwap is a collaborative platform where students create and work on projects (coding, music, design, cricket, editing etc).</p>
+                            <span>Java</span><span>Spring Boot</span><span>React</span><span>MySQL</span>
+
+                            <div class="project-buttons">
+                                <a class="btn disabled"></a>
+                                <a class="btn disabled"></a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Contact Section -->
+            <div id="contact">
+                <h2 class="heading">Get In Touch</h2>
+                <div class="line"></div>
+
+                <form id="contact-form">
+                    <input type="text" id="name" placeholder="Your Name" required>
+                    <input type="email" id="email" placeholder="Your Email" required>
+                    <textarea id="message" rows="4" placeholder="Your Message" required></textarea>
+                    <button type="submit" class="contact-btn">Send Message</button>
+                </form>
+
+                <p id="status-msg"></p>
+            </div>
+
+        </div>
+    </div>
+
+<!-- Typing + Dark Mode + EmailJS -->
+<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+<script>
+    // Typing Effect
+    var i = 0;
+    var txt = 'Software Engineer';
+    function typeEffect(){
+        if(i < txt.length){
+            document.getElementById("typing").innerHTML += txt.charAt(i);
+            i++; setTimeout(typeEffect, 100);
+        }
+    }
+    typeEffect();
+
+    // Theme Toggle
+    function toggleTheme(){
+        document.body.classList.toggle("light-mode");
+        document.querySelector(".theme-toggle").innerHTML =
+        document.body.classList.contains("light-mode") ? "☀️" : "🌙";
+    }
+
+    // Initialize EmailJS
+    (function(){
+        emailjs.init("mNlcAvIfNoLMvV4tT");
+    })();
+
+    // Send Message
+    document.getElementById("contact-form").addEventListener("submit", function(e){
+        e.preventDefault();
+
+        emailjs.send("service_mp5embk","template_s3bjw1c",{
+            from_name: document.getElementById("name").value,
+            reply_to: document.getElementById("email").value,
+            message: document.getElementById("message").value
+        })
+        .then(function(){
+            document.getElementById("status-msg").innerHTML = "✔ Message Sent Successfully!";
+            document.getElementById("status-msg").style.color = "var(--gold)";
+        }, function(error){
+            document.getElementById("status-msg").innerHTML = "❌ Something went wrong!";
+            document.getElementById("status-msg").style.color = "red";
+        });
+    });
+</script>
+
+</body>
+</html>
