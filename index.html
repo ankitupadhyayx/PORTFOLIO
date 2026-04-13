@@ -7,13 +7,16 @@
     <title>Ankit Upadhyay | Software Engineer</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Sora:wght@600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <div class="cursor-dot" aria-hidden="true"></div>
+    <div class="cursor-ring" aria-hidden="true"></div>
     <div class="bg-orb orb-1" aria-hidden="true"></div>
     <div class="bg-orb orb-2" aria-hidden="true"></div>
+    <div class="bg-grid" aria-hidden="true"></div>
 
     <header class="site-header" id="top">
         <nav class="navbar container" aria-label="Main navigation">
@@ -42,6 +45,12 @@
                     <h1>Ankit Upadhyay</h1>
                     <p class="typing-line"><span id="typingText"></span><span class="cursor" aria-hidden="true">|</span></p>
                     <p class="hero-subtext">Building secure APIs, scalable backend systems, and practical AI-powered developer products.</p>
+                    <div class="hero-contact-strip">
+                        <a href="tel:+918938076782" class="hero-contact-link" aria-label="Call mobile number">
+                            <span>Call:</span>
+                            <strong>+91 8938076782</strong>
+                        </a>
+                    </div>
                     <div class="hero-cta">
                         <a class="btn btn-primary" href="https://drive.google.com/file/d/1hx6RhwL7TMOzp0bWrOY0TSwccxfx31fd/view?usp=sharing" target="_blank" rel="noopener noreferrer">Download Resume</a>
                         <a class="btn btn-secondary" href="#projects">View Projects</a>
@@ -280,6 +289,10 @@
             <div class="container" data-aos="fade-up" data-aos-duration="800">
                 <h2 class="section-title">Contact</h2>
                 <div class="glass-card contact-card">
+                    <a href="tel:+918938076782" class="contact-link" aria-label="Mobile number">
+                        <span class="contact-icon">Call</span>
+                        <span>+91 8938076782</span>
+                    </a>
                     <a href="mailto:ankitupadhyayx@gmail.com" class="contact-link" aria-label="Email">
                         <span class="contact-icon">&#9993;</span>
                         <span>ankitupadhyayx@gmail.com</span>
@@ -296,7 +309,7 @@
                         <span class="contact-icon">&#128279;</span>
                         <span>Portfolio</span>
                     </a>
-                    <p class="location">Noida, India</p>
+                    <p class="location">Ghaziabad, India</p>
                 </div>
             </div>
         </section>
@@ -362,6 +375,45 @@
                 menuToggle.setAttribute("aria-expanded", "false");
             });
         });
+
+        const cursorDot = document.querySelector(".cursor-dot");
+        const cursorRing = document.querySelector(".cursor-ring");
+
+        if (window.matchMedia("(pointer: fine)").matches && cursorDot && cursorRing) {
+            let dotX = 0;
+            let dotY = 0;
+            let ringX = 0;
+            let ringY = 0;
+
+            const moveCursor = (event) => {
+                dotX = event.clientX;
+                dotY = event.clientY;
+            };
+
+            window.addEventListener("mousemove", moveCursor);
+
+            const loop = () => {
+                ringX += (dotX - ringX) * 0.2;
+                ringY += (dotY - ringY) * 0.2;
+
+                cursorDot.style.transform = `translate(${dotX}px, ${dotY}px)`;
+                cursorRing.style.transform = `translate(${ringX}px, ${ringY}px)`;
+
+                requestAnimationFrame(loop);
+            };
+
+            loop();
+
+            document.querySelectorAll("a, button, .glass-card, .btn").forEach((el) => {
+                el.addEventListener("mouseenter", () => {
+                    cursorRing.classList.add("cursor-hover");
+                });
+
+                el.addEventListener("mouseleave", () => {
+                    cursorRing.classList.remove("cursor-hover");
+                });
+            });
+        }
     </script>
 </body>
 </html>
