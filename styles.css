@@ -500,8 +500,8 @@ h1 {
 
 .skill-group:hover {
     transform: translateY(-7px);
-    border-color: rgba(255, 215, 0, 0.75);
-    box-shadow: 0 20px 34px rgba(0, 0, 0, 0.45), 0 0 30px rgba(255, 215, 0, 0.17);
+    border-color: rgba(57, 208, 255, 0.72);
+    box-shadow: 0 20px 34px rgba(0, 0, 0, 0.45), 0 0 30px rgba(57, 208, 255, 0.18);
 }
 
 .skill-group h3 {
