@@ -3,260 +3,286 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
+    <meta name="description" content="Ankit Upadhyay - Backend-focused Software Engineer portfolio.">
+    <title>Ankit Upadhyay | Software Engineer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Sora:wght@600;700;800&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    
-    <!-- Theme Toggle -->
-    <div class="theme-toggle" onclick="toggleTheme()">
-        🌙
-    </div>
+    <div class="bg-orb orb-1" aria-hidden="true"></div>
+    <div class="bg-orb orb-2" aria-hidden="true"></div>
 
-    <div class="main-container">
-        <!--sidebar-->
-        <div class="sidebar">
-
-            <!--profile-->
-            <div class="profile">
-                <img src="profile.png" alt="Profile Picture">
-                <h2>Ankit Upadhyay</h2>
-                <p id="typing"></p>   <!-- typing text here -->
-                
-                <!-- Resume Button -->
-                <a href="https://drive.google.com/file/d/1hx6RhwL7TMOzp0bWrOY0TSwccxfx31fd/view?usp=sharing" 
-                target="_blank" class="resume-btn">Download Resume</a>
+    <header class="site-header" id="top">
+        <nav class="navbar container" aria-label="Main navigation">
+            <a class="brand" href="#top" aria-label="Go to top">Ankit Upadhyay</a>
+            <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="navLinks">
+                <span></span><span></span><span></span>
+            </button>
+            <div class="nav-links" id="navLinks">
+                <a href="#hero" class="nav-link active">Home</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#skills" class="nav-link">Skills</a>
+                <a href="#projects" class="nav-link">Projects</a>
+                <a href="#achievements" class="nav-link">Achievements</a>
+                <a href="#contact" class="nav-link">Contact</a>
             </div>
+        </nav>
+    </header>
 
-            <!--contact-->
-            <div class="contact">
-                <div class="email">
-                    <h3 class="label">Email</h3>
-                    <a href="mailto:ankitupadhyayx@gmail.com" class="value">ankitupadhyayx@gmail.com</a>
-                </div>
-                <div class="phone">
-                    <h3 class="label">Phone</h3>
-                    <a href="tel:+918938076782" class="value">+91 8938076782</a>
-                </div>
-                <div class="location">
-                    <h3 class="label">Location</h3>
-                    <p class="value">Ghaziabad, Uttar Pradesh</p>
-                </div>
-            </div>
-
-            <!--social media-->
-            <div class="social">
-                <a href="https://github.com/ankitupadhyayx"><img src="https://www.svgrepo.com/show/394174/github.svg" alt=""></a>
-                <a href="https://www.linkedin.com/in/ankit-upadhyay-3a6b66288/"><img src="https://www.svgrepo.com/show/473701/linkedin.svg" alt=""></a>
-                <a href="https://leetcode.com/u/ankitupadhyayx/"><img src="https://www.svgrepo.com/show/330828/leetcode.svg" alt=""></a>
-            </div>
-        </div>
-
-        <div class="main-content">
-
-            <!--navigation-->
-            <div id="navigation">
-                <nav>
-                    <a href="#about" class="active">About</a>
-                    <a href="#skills">Skills</a>
-                    <a href="#education">Education</a>
-                    <a href="#portfolio">Portfolio</a>
-                    <a href="#contact">Contact</a>
-                </nav>
-            </div>
-
-            <!--about me-->
-            <div id="about">
-                <h2 class="heading">About Me</h2>
-                <div class="line"></div>
-                <p class="content">
-                    I am a passionate and dedicated software engineer with a strong foundation in computer science, backend technologies, and artificial intelligence. I enjoy building high-performance applications in Java, Spring Boot, and modern web technologies. My goal is to continuously learn, solve real-life problems using code, and contribute to impactful software products.
-                </p>
-            </div>
-
-            <!--skills-->
-            <div id="skills">
-                <h2 class="heading">Skills</h2>
-                <div class="line"></div>
-                <div class="grid-container">
-                    <div class="item"><img src="https://www.svgrepo.com/show/449120/java.svg"><h3>Java</h3></div>
-                    <div class="item"><img src="https://simpleicons.org/icons/datastax.svg"><h3>Data Structures</h3></div>
-                    <div class="item"><img src="https://simpleicons.org/icons/javascript.svg"><h3>JavaScript</h3></div>
-                    <div class="item"><img src="https://simpleicons.org/icons/react.svg"><h3>React</h3></div>
-                    <div class="item"><img src="https://simpleicons.org/icons/html5.svg"><h3>HTML</h3></div>
-                    <div class="item"><img src="https://simpleicons.org/icons/git.svg"><h3>Git & GitHub</h3></div>
-                </div>
-            </div>
-
-            <!--education-->
-            <div id="education">
-                <h2 class="heading">Education</h2>
-                <div class="line"></div>
-                <div class="edtech">
-                    <div class="edfirst">
-                        <div class="year">2022-26</div>
-                        <h3>B.Tech in CSE (AI & ML)</h3>
-                        <p class="college">IMS Engineering College, Ghaziabad</p>
-                        <p class="work">Learning: Java, DSA, Spring Boot, REST APIs, React, Python, ML & Full Stack.</p>
-                        <div class="goal"></div>
+    <main>
+        <section id="hero" class="hero section">
+            <div class="container hero-grid">
+                <div class="hero-content" data-aos="fade-right" data-aos-duration="800">
+                    <p class="eyebrow">Backend-Focused Software Engineer</p>
+                    <h1>Ankit Upadhyay</h1>
+                    <p class="typing-line"><span id="typingText"></span><span class="cursor" aria-hidden="true">|</span></p>
+                    <p class="hero-subtext">Building secure APIs, scalable backend systems, and practical AI-powered developer products.</p>
+                    <div class="hero-cta">
+                        <a class="btn btn-primary" href="https://drive.google.com/file/d/1hx6RhwL7TMOzp0bWrOY0TSwccxfx31fd/view?usp=sharing" target="_blank" rel="noopener noreferrer">Download Resume</a>
+                        <a class="btn btn-secondary" href="#projects">View Projects</a>
                     </div>
-
-                    <div class="edsecond">
-                        <div class="year">2020-22</div>
-                        <h3>12th (PCM)</h3>
-                        <p class="college">SR Inter College, Agra</p>
-                        <p class="work">Completed with Physics, Chemistry, Mathematics</p>
-                        <div class="goal"></div>
-                    </div>
-
-                    <div class="edthird">
-                        <div class="year">2018-20</div>
-                        <h3>10th</h3>
-                        <p class="college">SR Inter College, Agra</p>
-                        <p class="work">Completed with Science Stream</p>
-                        <div class="goal"></div>
-                    </div>
-                    <div class="liner"></div>
+                </div>
+                <div class="hero-photo-wrap" data-aos="zoom-in" data-aos-duration="900">
+                    <div class="photo-glow"></div>
+                    <img src="profile.png" alt="Ankit Upadhyay profile image" class="hero-photo" loading="eager" decoding="async">
                 </div>
             </div>
+        </section>
 
-            <!--portfolio-->
-            <div id="portfolio">
-                <h2 class="heading">Portfolio</h2>
-                <div class="line"></div>
-                <div class="project-container">
+        <section id="about" class="section">
+            <div class="container" data-aos="fade-up" data-aos-duration="800">
+                <h2 class="section-title">About</h2>
+                <article class="glass-card about-card">
+                    <p>
+                        I am a Software Engineer focused on backend development and scalable systems.
+                        I specialize in Java, Node.js, and REST API development.
+                    </p>
+                    <p>
+                        I have built real-world applications like VitaCollab, a healthcare platform
+                        for managing and sharing medical records securely.
+                    </p>
+                    <p>
+                        I am also exploring AI/ML and building intelligent systems using LLMs.
+                    </p>
+                    <p>
+                        Currently seeking Backend Developer / SDE opportunities.
+                    </p>
+                </article>
+            </div>
+        </section>
 
-                    <!--MediCollab-->
-                    <div class="project">
-                        <img src="project1.png">
-                        <div class="card">
-                            <h3>MediCollab</h3>
-                            <p>MediCollab is a web-based health-centric platform where doctors and patients digitally connect. Doctors can upload medical records, prescriptions, and test results, while patients verify reports, track health history, and book appointments. AI offers assistance based on symptoms.</p>
+        <section id="skills" class="section">
+            <div class="container">
+                <h2 class="section-title" data-aos="fade-up" data-aos-duration="700">Skills</h2>
+                <div class="skills-grid">
+                    <article class="glass-card skill-group" data-aos="fade-up" data-aos-delay="40">
+                        <h3><span class="skill-icon">&#9874;</span>Languages</h3>
+                        <ul>
+                            <li>Java</li>
+                            <li>JavaScript</li>
+                        </ul>
+                    </article>
 
-                            <div class="video-wrapper">
-                                <iframe src="https://drive.google.com/file/d/1sMNm20hBMhligWeuqSrMfIv0wOkMtzQC/preview"
-                                width="100%" height="250" allow="autoplay" frameborder="0" allowfullscreen></iframe>
-                            </div>
+                    <article class="glass-card skill-group" data-aos="fade-up" data-aos-delay="80">
+                        <h3><span class="skill-icon">&#9881;</span>Backend</h3>
+                        <ul>
+                            <li>Node.js</li>
+                            <li>Express.js</li>
+                            <li>REST APIs</li>
+                            <li>JWT Authentication</li>
+                        </ul>
+                    </article>
 
-                            <span>React</span><span>Tailwind</span><span>Node</span><span>Express</span><span>MongoDB</span><span>JWT</span>
+                    <article class="glass-card skill-group" data-aos="fade-up" data-aos-delay="120">
+                        <h3><span class="skill-icon">&#127760;</span>Frontend</h3>
+                        <ul>
+                            <li>React.js</li>
+                            <li>HTML</li>
+                            <li>CSS</li>
+                            <li>Tailwind CSS</li>
+                        </ul>
+                    </article>
 
-                            <div class="project-buttons">
-                                <a href="https://github.com/ankitupadhyayx/medicollab-finale" target="_blank" class="btn github">GitHub</a>
-                                <a class="btn disabled"></a>
-                            </div>
+                    <article class="glass-card skill-group" data-aos="fade-up" data-aos-delay="160">
+                        <h3><span class="skill-icon">&#128190;</span>Database</h3>
+                        <ul>
+                            <li>MongoDB</li>
+                            <li>Mongoose</li>
+                        </ul>
+                    </article>
+
+                    <article class="glass-card skill-group" data-aos="fade-up" data-aos-delay="200">
+                        <h3><span class="skill-icon">&#128736;</span>Tools</h3>
+                        <ul>
+                            <li>Git</li>
+                            <li>GitHub</li>
+                            <li>Postman</li>
+                            <li>Cloudinary</li>
+                        </ul>
+                    </article>
+
+                    <article class="glass-card skill-group" data-aos="fade-up" data-aos-delay="240">
+                        <h3><span class="skill-icon">&#129504;</span>Core CS</h3>
+                        <ul>
+                            <li>Data Structures &amp; Algorithms</li>
+                            <li>OOP</li>
+                            <li>DBMS</li>
+                        </ul>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="section">
+            <div class="container">
+                <h2 class="section-title" data-aos="fade-up" data-aos-duration="700">Projects</h2>
+
+                <article class="project-card featured" data-aos="fade-up" data-aos-duration="850">
+                    <div class="project-image-wrap">
+                        <img src="project1.png" alt="VitaCollab project preview" loading="lazy" decoding="async">
+                        <span class="project-badge">Featured</span>
+                    </div>
+                    <div class="project-content">
+                        <h3>VitaCollab</h3>
+                        <p class="project-desc">Secure patient-centric healthcare platform enabling doctors and patients to manage, upload, and share medical records.</p>
+                        <ul class="feature-list">
+                            <li>JWT authentication &amp; role-based access</li>
+                            <li>Upload and manage health records</li>
+                            <li>Timeline view of medical history</li>
+                            <li>Doctor-patient interaction</li>
+                        </ul>
+                        <p class="stack"><strong>Tech Stack:</strong> React, Node.js, Express, MongoDB, Cloudinary</p>
+                        <div class="project-actions">
+                            <a href="https://urlminimizer.netlify.app" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Live Demo</a>
+                            <a href="https://github.com/ankitupadhyayx/medicollab-finale" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">GitHub</a>
                         </div>
                     </div>
+                </article>
 
-                    <!--URL Shortener-->
-                    <div class="project">
-                        <img src="project2.png">
-                        <div class="card">
-                            <h3>URL Shortener</h3>
-                            <p>Secure link shortener with analytics (click count, IP tracking).</p>
-                            <span>Node</span><span>Express</span><span>MongoDB</span><span>JWT</span><span>REST API</span>
-
-                            <div class="project-buttons">
-                                <a href="https://github.com/ankitupadhyayx/URLs" target="_blank" class="btn github">GitHub</a>
-                                <a href="https://urlminimizer.netlify.app" target="_blank" class="btn live">Live Demo</a>
-                            </div>
-                        </div>
+                <article class="project-card" data-aos="fade-up" data-aos-delay="120" data-aos-duration="850">
+                    <div class="project-image-wrap">
+                        <img src="project2.png" alt="AI Assistant project preview" loading="lazy" decoding="async">
                     </div>
-
-                    <!--Cyber Crime-->
-                    <div class="project">
-                        <img src="https://www.svgrepo.com/show/503272/cybersecurity-two-tone.svg">
-                        <div class="card">
-                            <h3>Cyber Crime Portal</h3>
-                            <p>Crime reporting system with admin panel, ML-based fake complaint detection & heatmap visualization.</p>
-                            <span>React</span><span>Spring Boot</span><span>MySQL</span><span>Python (NLP)</span><span>JWT</span>
-
-                            <div class="project-buttons">
-                                <a class="btn disabled"></a>
-                                <a class="btn disabled"></a>
-                            </div>
-                        </div>
+                    <div class="project-content">
+                        <h3>AI Assistant</h3>
+                        <p class="project-desc">AI-powered assistant that answers queries from uploaded documents.</p>
+                        <ul class="feature-list">
+                            <li>LLM integration</li>
+                            <li>PDF/DOCX/TXT support</li>
+                            <li>Embeddings + semantic search</li>
+                            <li>Context-aware responses</li>
+                        </ul>
+                        <p class="stack"><strong>Tech Stack:</strong> Node.js, AI APIs, Vector DB</p>
                     </div>
+                </article>
+            </div>
+        </section>
 
-                    <!--Skill Swap-->
-                    <div class="project">
-                        <img src="https://www.svgrepo.com/show/47844/add-friend.svg">
-                        <div class="card">
-                            <h3>Skill Swap Portal</h3>
-                            <p>SkillSwap is a collaborative platform where students create and work on projects (coding, music, design, cricket, editing etc).</p>
-                            <span>Java</span><span>Spring Boot</span><span>React</span><span>MySQL</span>
-
-                            <div class="project-buttons">
-                                <a class="btn disabled"></a>
-                                <a class="btn disabled"></a>
-                            </div>
-                        </div>
-                    </div>
-
+        <section id="achievements" class="section">
+            <div class="container" data-aos="fade-up" data-aos-duration="750">
+                <h2 class="section-title">Achievements</h2>
+                <div class="achievement-grid">
+                    <article class="glass-card achievement-item">
+                        <h3>100+</h3>
+                        <p>Solved DSA problems</p>
+                    </article>
+                    <article class="glass-card achievement-item">
+                        <h3>3+</h3>
+                        <p>Built full-stack projects</p>
+                    </article>
+                    <article class="glass-card achievement-item">
+                        <h3>Backend</h3>
+                        <p>Strong backend development skills</p>
+                    </article>
                 </div>
             </div>
+        </section>
 
-            <!-- Contact Section -->
-            <div id="contact">
-                <h2 class="heading">Get In Touch</h2>
-                <div class="line"></div>
-
-                <form id="contact-form">
-                    <input type="text" id="name" placeholder="Your Name" required>
-                    <input type="email" id="email" placeholder="Your Email" required>
-                    <textarea id="message" rows="4" placeholder="Your Message" required></textarea>
-                    <button type="submit" class="contact-btn">Send Message</button>
-                </form>
-
-                <p id="status-msg"></p>
+        <section id="contact" class="section section-last">
+            <div class="container" data-aos="fade-up" data-aos-duration="800">
+                <h2 class="section-title">Contact</h2>
+                <div class="glass-card contact-card">
+                    <a href="mailto:ankitupadhyayx@gmail.com" class="contact-link" aria-label="Email">
+                        <span class="contact-icon">&#9993;</span>
+                        <span>ankitupadhyayx@gmail.com</span>
+                    </a>
+                    <a href="https://www.linkedin.com/in/ankit-upadhyay-3a6b66288/" target="_blank" rel="noopener noreferrer" class="contact-link" aria-label="LinkedIn">
+                        <span class="contact-icon">in</span>
+                        <span>LinkedIn</span>
+                    </a>
+                    <a href="https://github.com/ankitupadhyayx" target="_blank" rel="noopener noreferrer" class="contact-link" aria-label="GitHub">
+                        <span class="contact-icon">&#60;/&#62;</span>
+                        <span>GitHub</span>
+                    </a>
+                    <p class="location">Ghaziabad, India</p>
+                </div>
             </div>
+        </section>
+    </main>
 
-        </div>
-    </div>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        const typingTarget = document.getElementById("typingText");
+        const text = "Backend Developer | Java | Node.js | AI Enthusiast";
+        let charIndex = 0;
 
-<!-- Typing + Dark Mode + EmailJS -->
-<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
-<script>
-    // Typing Effect
-    var i = 0;
-    var txt = 'Software Engineer';
-    function typeEffect(){
-        if(i < txt.length){
-            document.getElementById("typing").innerHTML += txt.charAt(i);
-            i++; setTimeout(typeEffect, 100);
+        function typeText() {
+            if (charIndex < text.length) {
+                typingTarget.textContent += text.charAt(charIndex);
+                charIndex += 1;
+                setTimeout(typeText, 60);
+            }
         }
-    }
-    typeEffect();
 
-    // Theme Toggle
-    function toggleTheme(){
-        document.body.classList.toggle("light-mode");
-        document.querySelector(".theme-toggle").innerHTML =
-        document.body.classList.contains("light-mode") ? "☀️" : "🌙";
-    }
+        typeText();
 
-    // Initialize EmailJS
-    (function(){
-        emailjs.init("mNlcAvIfNoLMvV4tT");
-    })();
-
-    // Send Message
-    document.getElementById("contact-form").addEventListener("submit", function(e){
-        e.preventDefault();
-
-        emailjs.send("service_mp5embk","template_s3bjw1c",{
-            from_name: document.getElementById("name").value,
-            reply_to: document.getElementById("email").value,
-            message: document.getElementById("message").value
-        })
-        .then(function(){
-            document.getElementById("status-msg").innerHTML = "✔ Message Sent Successfully!";
-            document.getElementById("status-msg").style.color = "var(--gold)";
-        }, function(error){
-            document.getElementById("status-msg").innerHTML = "❌ Something went wrong!";
-            document.getElementById("status-msg").style.color = "red";
+        AOS.init({
+            once: false,
+            duration: 800,
+            easing: "ease-out-cubic"
         });
-    });
-</script>
 
+        const sections = document.querySelectorAll("section[id]");
+        const navLinks = document.querySelectorAll(".nav-link");
+
+        const observer = new IntersectionObserver(
+            (entries) => {
+                entries.forEach((entry) => {
+                    if (!entry.isIntersecting) {
+                        return;
+                    }
+
+                    const id = entry.target.getAttribute("id");
+                    navLinks.forEach((link) => {
+                        link.classList.toggle("active", link.getAttribute("href") === `#${id}`);
+                    });
+                });
+            },
+            {
+                threshold: 0.5,
+                rootMargin: "-80px 0px -20% 0px"
+            }
+        );
+
+        sections.forEach((section) => observer.observe(section));
+
+        const menuToggle = document.getElementById("menuToggle");
+        const navLinksWrap = document.getElementById("navLinks");
+
+        menuToggle.addEventListener("click", () => {
+            const isOpen = navLinksWrap.classList.toggle("open");
+            menuToggle.setAttribute("aria-expanded", String(isOpen));
+        });
+
+        navLinks.forEach((link) => {
+            link.addEventListener("click", () => {
+                navLinksWrap.classList.remove("open");
+                menuToggle.setAttribute("aria-expanded", "false");
+            });
+        });
+    </script>
 </body>
 </html>
